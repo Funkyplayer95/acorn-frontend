@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+            /*플렉스를 이용 : 블록요소를 인라인 요소로 변경 Y축 증심*/
+            /*justify-content: space-between; 적당한 공백 있으면서 정렬*/
+            /*justify-content: space-around; 양쪽 끝 공백 있으면서 정렬*/
+            /*justify-content: center; 가운데 정렬*/
+            /*justify-content: flex-end; 끝부터 정렬*/
+            /*justify-content: flex-start; 시작부터 정렬*/
+
+            /*
+            align 이용 : X축 중심
+            align-items : fkex-end;
+            align-items : fkex-start;
+            align-items : center;
+            
+            flex-direction 이용 : 세로로 방향전환 ( 주축이 됨 )
+
+
+            height : 100vh = 세로 , 100wh 가로
+
+            */
+
+
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+        }
+        .box1{
+            background-color: pink;
+        }
+        .box2{
+            background-color: violet;
+        }
+        .box3{
+            background-color: yellow;
+        }
+        .box4{
+            background-color: green;
+        }      
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box1">박스1</div>
+        <div class="box2">박스2</div>
+        <div class="box3">박스3</div>
+        <!--<div class="box4">박스4</div>-->
+    </section>
+</body>
+</html>

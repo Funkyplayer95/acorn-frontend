@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원근감</title>
+    <style>
+        .origin{
+            width: 150px;
+            height: 180px;
+            border: 1px solid black;
+            float: left;
+            margin: 30px;
+        }
+        img{
+            width: 150px;
+            height: 180px;
+        }
+        .rotatex:hover{
+            transform: rotateX(50deg);
+        }
+        .rotatey:hover{
+            transform: rotateY(50deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="origin"> <!--오리지널 사진-->
+        <img src="https://cdn.pixabay.com/photo/2023/07/06/07/40/antarctica-8109879_1280.jpg" alt="">
+    </div>
+    <div class="origin">
+        <div class="rotatex"> <!--부모요소에게 효과를 준다-->
+        <img src="https://cdn.pixabay.com/photo/2023/07/06/07/40/antarctica-8109879_1280.jpg" alt="">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="rotatey">
+        <img src="https://cdn.pixabay.com/photo/2023/07/06/07/40/antarctica-8109879_1280.jpg" alt="">
+        </div>
+    </div>
+    <div class="origin" id="pers">
+        <div class="rotatex">
+        <img src="https://cdn.pixabay.com/photo/2023/07/06/07/40/antarctica-8109879_1280.jpg" alt="">
+        </div>
+    </div>
+    <div class="origin" id="pers">
+        <div class="rotatey">
+        <img src="https://cdn.pixabay.com/photo/2023/07/06/07/40/antarctica-8109879_1280.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

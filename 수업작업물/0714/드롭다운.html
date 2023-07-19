@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운버튼</title>
+    <style>
+        .wrap{
+            position: relative;
+            display: inline-block;
+        }
+        .swrap{
+            display: none;
+        }
+        .wrap:hover .swrap{
+            display: block;
+            position: absolute;
+        }
+        button{
+            background-color: black;
+            color: white;
+            height: 60px;
+            width: 200px;
+        }
+        .swrap .a{
+            display: flex;
+            background-color: rgba(0, 225, 225, 0.8);
+            color: white;
+            height: 60px;
+            width: 200px;
+            align-items: center;
+            justify-content: center;
+        }
+        .swrap .a1{
+            display: flex;
+            background-color: rgba(0, 225, 225, 0.5);
+            color: white;
+            height: 60px;
+            width: 200px;
+            align-items: center;
+            justify-content: center;
+        }
+        .swrap .a2{
+            display: flex;
+            background-color: rgba(0, 225, 225, 0.2);
+            color: white;
+            height: 60px;
+            width: 200px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <button>드롭다운</button>
+        <div class="swrap">
+            <a href="#" class="a">서브메뉴1</a>
+            <a href="#" class="a1">서브메뉴2</a>
+            <a href="#" class="a2">서브메뉴3</a>
+        </div>
+    </div>
+    <div class="wrap">
+        <button>드롭다운</button>
+        <div class="swrap">
+            <a href="#" class="a">서브메뉴1</a>
+            <a href="#" class="a1">서브메뉴2</a>
+            <a href="#" class="a2">서브메뉴3</a>
+        </div>
+    </div>
+    <div class="wrap">
+        <button>드롭다운</button>
+        <div class="swrap">
+            <a href="#" class="a">서브메뉴1</a>
+            <a href="#" class="a1">서브메뉴2</a>
+            <a href="#" class="a2">서브메뉴3</a>
+        </div>
+    </div>
+</body>
+</html>

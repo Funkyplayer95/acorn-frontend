@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position_relative</title>
+    <style>
+        body{
+            box-sizing: border-box;
+        }
+        .static{
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            position: static; /*요소를 문서의 흐름에 맞추어 배치(기본값)*/
+        }
+        .relative-1{
+            background-color: blue;
+            width: 300px;
+            height: 200px;
+            position: relative;
+        }
+        .relative-2{
+            background-color: greenyellow;
+            width: 300px;
+            height: 200px;
+            position: relative;
+            left: 100px;
+            top: -50px;
+        }
+        .fixed{
+            width: 150px;
+            height: 150px;
+            background-color: violet;
+            position: fixed;
+            right: 50px;
+            top: 50px;
+
+        }
+        .sticky{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: sticky;
+            top: 5px; /*top을 넣어야 실행이 가능. 안하면 실행불가*/
+        }
+    </style>
+</head>
+<body>
+    <div class="static">박스1</div>
+    <div class="relative-1">박스2</div>
+    <div class="relative-2">박스3</div>
+    <div class="fixed">박스4 <br>공지사항 용 박스</div>
+    <div class="sticky">박스5</div>
+</body>
+</html>

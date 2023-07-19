@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.dropdown{
+  position : relative;
+  display : inline-block;
+}
+
+.dropdown-content{
+  display : none;
+  position : absolute;
+  z-index : 1; /*다른 요소들보다 앞에 배치*/
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+
+}
+.dropbtn {
+    color: white;
+    background-color: aquamarine;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.dropdown-content a{
+    height: 50px;
+    width: 200px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none ;
+    color: black;
+}
+.dropdown-content a:hover{
+    color: red;
+}
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        
+        <h2 class="dropbtn">드롭박스</h2>
+        <div class="dropdown-content">
+            asdasd
+          <a href="#" class="l1">서브메뉴1</a>
+          <a href="#" class="l2" >서브메뉴2</a>
+          <a href="#" class="l3" >서브메뉴3</a>
+        </div>
+      </div> 
+  
+</body>
+</html>

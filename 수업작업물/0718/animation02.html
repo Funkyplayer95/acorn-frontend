@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 연습</title>
+    <style>
+        body::-webkit-scrollbar{
+            display: none;
+        }
+        section{
+            margin: 0;
+            background: url(https://cdn.pixabay.com/photo/2023/01/21/13/39/night-sky-7733876_1280.jpg) no-repeat;
+            width: 100%;
+            height: 900px;
+            background-size: cover;
+            overflow: hidden;
+        }
+        .firstpart span{
+            color: aliceblue;
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            animation: moveIn 2s ease-out;
+        }
+
+        @keyframes moveIn {
+            from{
+                right: -10%;
+                opacity: 0; /*0부터 1까지 소수점 만*/
+            }
+            to{
+                right: 5%;
+                opacity: 0.8;
+            }
+        }
+
+        .firstpart p{
+            color: aliceblue;
+            font-size: 70px;
+            position: absolute;
+            top: 60%;
+            right: 7%;
+            animation: moveIn2 1.5s ease-in-out;
+        }
+
+        @keyframes moveIn2 {
+            from{
+                right: -10%;
+                opacity: 0;
+            }
+            to{
+                right: 7%;
+                opacity: 1;
+            }
+        }
+        .secondpart{
+            color: aliceblue;
+            font-size: 20px;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            animation: moveIn3 2.5s ease-out;
+        }
+        @keyframes moveIn3 {
+            from{
+                left: -10%;
+                opacity: 0;
+            }
+            to{
+                left: 5%;
+                opacity: 0.7;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="firstpart">
+            <!--span = 인라인요소, 줄 안에서 해당 글자만큼 공간을 차지-->
+            <!-- b,stron = 강조역활-->
+            <span> pour un logiciel CRM, </span> <br>
+            <p>
+                simple, complet <br>
+                et intuitif
+            </p>
+        </div>
+
+        <pre class="secondpart"> <!--입력한 대로 엔터(줄바꿈) 적용-->
+CRM 소프트웨어를 선택하고,
+간단하고 완전하며
+직관적인 </pre>
+    </section>
+</body>
+</html>
