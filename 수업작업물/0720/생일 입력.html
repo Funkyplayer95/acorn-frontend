@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 생일 입력</title>
+</head>
+<body>
+    
+
+    <script>
+        //const 상수 : 변하지 않는 상수를 입력받을 때 사용
+        // var 변수선언할 때 사용한다.
+        // let 에크마6버전(2015년)부터
+        const currentYear = 2023;
+        let birthYear;
+        let age;
+        let name;
+
+        birthYear = prompt("태어난 년도를 입력하세요. (yyyy)"," ");
+        age = currentYear - birthYear; //현재 나이
+        document.write(currentYear + "년 현재<br>")
+        // document.write(birthYear + "년 현재<br>")
+        name = prompt("당신의 이름을 적어주세요.");
+        
+        document.write(age,"<br>");
+        
+        document.write(name + "님 <br>" + birthYear + "년에 태어난 당신의 나이는 만 " + age + "살 입니다")
+
+
+    </script>
+</body>
+</html>

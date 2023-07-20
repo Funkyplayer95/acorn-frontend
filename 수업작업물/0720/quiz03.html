@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평균점수</title>
+    <style>
+        h1{
+            background-color: olivedrab;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let korean;
+        let math;
+        let english;
+        let a;
+        let message = "시험 결과";    
+        
+        korean = Number(prompt("당신의 국어 점수는? " , ));
+        console.log(typeof korean);
+        math = Number(prompt("당신의 수학 점수는? " , ));
+        english = Number(prompt("당신의 영어 점수는? " , ));
+        a = korean+math+english;
+        if(a >= 70){
+                message = '축 합격입니다 !!' ;
+            }
+            else{
+                message = '저런..'
+            }
+        document.write("<h1>당신의 평균 점수는 ? " + a/3 + " 입니다.</h1><br>" + "<h3>" + message + "</h3>");
+    </script>
+</body>
+</html>

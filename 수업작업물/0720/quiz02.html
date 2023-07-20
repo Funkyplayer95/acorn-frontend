@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반지름</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let curcle;
+        let half;
+        
+        
+        half = prompt("반지름이 얼마입니까?", " ");
+        console.log(typeof half);   
+        curcle = half * half * 3.14;
+        document.write("원의 넓이는 " + curcle + " 입니다. <br>" )
+
+        let width
+        let height
+        let sagack
+        let samgack
+
+        width = prompt("가로의 길이는 ", " ");
+        height = prompt("세로의 길이는 ", " ");
+        sagack = width * height;
+        samgack = width * height * 0.5;
+
+        document.write("사각형의 넓이는 " + sagack + " 이고, 삼각형의 넓이는 " + samgack +" 입니다.");
+    </script>
+</body>
+</html>
