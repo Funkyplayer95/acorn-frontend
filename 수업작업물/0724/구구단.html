@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 700px;
+            margin: 0 auto;
+        }
+        div{
+            display: inline-block;
+            padding: 5px;
+
+            margin: 50px; 
+            
+        }
+        .gugu div{
+            padding: 5px;
+            margin: 2px;
+            padding: 10px;
+            margin: 50px;
+            border: 1px solid;
+        }
+        h3{
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>구구단을 외우자 , 구구단을 외우자</h1>
+    <div class="gugu">
+    <script>
+        let i, j;
+        for(i=1; i<=6; i++){
+            document.write("<div>");
+            document.write("<h3>" + i + "단</h3>");
+            for(j=1; j<=9; j++){
+                document.write(i + "x" + j +" = " + i*j + "<br>");
+            }
+            document.write("</div>")
+        }
+    </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            height: 150px;
+        }
+        .p1{
+            display: block;
+        }
+        .p2{
+            display: none;
+        }
+        .p1.active{
+            display: none;
+        }
+        .p2.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img src="../0714/images/겨울1.jpg" class="p1">
+    <img src="../0714/images/쉿,코딩중.png" class="p2">
+
+    <button class="togglebtn1"> change img1</button>
+    <button class="togglebtn2"> change img2</button>
+
+
+    <script>
+         const $togglebtn1 = document.querySelector(".togglebtn1");
+         const $togglebtn2 = document.querySelector(".togglebtn2");
+        let $p1 = document.querySelector('.p1');
+        let $p2 = document.querySelector('.p2');
+
+            //add 와 remove를 한번에 사용 : toggle
+        $togglebtn1.addEventListener('click', () =>{
+            $p1.style.display = 'block'
+            $p2.style.display = 'none'
+            
+        })
+        $togglebtn2.addEventListener('click', () =>{
+            $p1.style.display = 'none'
+            $p2.style.display = 'block'
+        })
+    </script>
+</body>
+</html>
