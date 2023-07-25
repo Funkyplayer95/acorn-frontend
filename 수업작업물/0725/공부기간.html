@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #container{
+            border: 2px double black;
+            width: 400px;
+            height: 400px;
+            box-sizing: border-box;
+            text-align: center;
+            margin: 100px auto;
+            border-radius: 30px;
+            background-color: aquamarine;
+
+        }
+        .accent{
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        p{
+        font-size: 15px;
+        }
+        h1{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1> 공부한 기간</h1>
+        <p><span class="accent" id="result1"></span>일이 되었습니다.</p>
+        <p><span class="accent" id="result2"></span>시간이 되었습니다.</p>
+        <p><span class="accent" id="result3"></span>분이 되었습니다.</p>
+        <p><span class="accent" id="result4"></span>초가 되었습니다.</p>
+        <p>축하합니다!</p>
+    </div>
+
+    <script>
+        let now = new Date("2023-07-25");
+        let firstDay = new Date("2023-07-10");
+        let today = new Date(now-firstDay);
+
+        
+        //밀리 초를 일 수로 계산하고 반올림
+        //getTime() 매소드는 특정한 날까지의 시간을 밀리초(1/1000초)단위로
+        //표시한다.
+        document.querySelector("#result1").innerHTML = today.getTime() / (1000*60*60*24)
+        document.querySelector("#result2").innerHTML = today.getTime() / (1000*60*60)
+        document.querySelector("#result3").innerHTML = today.getTime() / (1000*60)
+        document.querySelector("#result4").innerHTML = today.getTime() / (1000)
+    </script>
+</body>
+</html>

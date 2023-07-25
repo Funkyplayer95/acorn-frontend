@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: yellowgreen;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            transition: ease-in-out 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="leftbtn"> 왼쪽으로 회전  </a>
+    <a href="#" id="rightbtn"> 오른쪽으로 회전 </a>
+    <div class="inbox"></div>
+
+
+    <script>
+        const $leftbtn = document.getElementById('leftbtn');
+        const $rightbtn = document.getElementById('rightbtn');
+        const $inbox = document.querySelector('.inbox');
+        let num = 0;
+
+        $leftbtn.addEventListener('click', e =>{
+            e.preventDefault();
+            num-=45;    
+            console.log(num);
+            $inbox.style.transform = `rotate(${num}deg)`;
+        })
+        $rightbtn.addEventListener('click', e =>{
+            e.preventDefault();
+            num+=45;    
+            console.log(num);
+            $inbox.style.transform = `rotate(${num}deg)`;
+        })
+    </script>
+</body>
+</html>

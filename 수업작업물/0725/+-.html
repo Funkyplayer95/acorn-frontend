@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 50px;
+
+        }
+        #plusbtn, #minusbtn, #zerobtn{
+            font-size: 25px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="plusbtn">Plus</a>
+    <a href="#" id="zerobtn">Zero</a>
+    <a href="#" id="minusbtn">Minus</a>
+    <div class="inText"></div>
+
+    <script>
+        const $plusbtn = document.getElementById('plusbtn');
+        const $minusbtn = document.getElementById('minusbtn');
+        const $zerobtn = document.getElementById('zerobtn');
+        let $inText = document.querySelector('.inText');
+        let num = 0;
+
+        $plusbtn.addEventListener('click', e =>{
+            e.preventDefault();
+            num++;
+            console.log(num);
+            $inText.innerText = num;
+        })
+        $minusbtn.addEventListener('click', e =>{
+            e.preventDefault();
+            num--;
+            console.log(num);
+            $inText.innerText = num;
+        })
+        $zerobtn.addEventListener('click', e =>{
+            e.preventDefault();
+            num = 0;
+            console.log(num);
+            $inText.innerText = num;
+        })
+    </script>
+</body>
+</html>

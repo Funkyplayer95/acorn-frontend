@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+        }
+        .chang{
+            border: 3px dotted black;
+            width: 300px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <img src="https://img.freepik.com/free-photo/simple-illustration-word-sale-red-white_181624-23441.jpg">
+        <form>
+        <ul>
+            <li>
+                원 &nbsp; 가 : <input type="text" id="oPrice">원
+            </li>
+            <li>
+                할인율 : <input type="text" id="rate"> % 
+            </li>
+        </ul>
+    </form>    
+    <button onclick="showprice()">할인 가격 계산하기</button>
+
+    </div>
+    <div class="showResult"></div>  <!--결과창-->
+
+    <!-- form은 데이터 바구니 같은 녀석이라서
+    버튼이 form안에 있으면 데이터를 다 보내버려서 결과창에 입력되어야 할 데이터가
+    날아가버림. 그렇기에 버튼을 form 밖에 꺼내거나
+    JS안에다가 event.preventDefault();를 입력하여서
+    데이터전송 or 새로고침을 막아버려야 한다.
+    안그러면 결과창에대한 값이 나오지 않음. -->
+
+
+    <script>
+        // function showprice(){
+        //     let $originPrice = document.getElementById('oPrice').value;
+        //     let $rate = document.getElementById('rate').value;
+        //     $originPrice * ($rate/100)
+        // }
+        function showprice(){   
+            let originPrice = document.getElementById('oPrice').value;
+            let rate = document.getElementById('rate').value;
+            let save = originPrice * (rate/100);
+            let won = originPrice - save;
+            
+            document.querySelector('.showResult').innerHTML =
+            `<div class='chang'>원가 ${originPrice}원에서 할인율이 ${rate}% 적용되어<br>
+            최종가격은 ${won}원 입니다.</div>`
+        }
+
+        //function안에 값을 해당하는 경우에는
+        //해당 값만 출력하고 말것이기 때문에
+        //데이터가 잡아먹는값이 많아지지않아 진행한 것.
+        //계속 남겨야 될 함수는 funtion위에 선언하여 남겨도 됨.
+    </script>
+</body>
+</html>
