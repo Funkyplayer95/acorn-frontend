@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 35px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        body{
+            padding-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <script>
+        let present = [];
+        present[0] = '기분이 저기압 일때는, 고기앞으로 가라 <br>- 고깃집 사장님';
+        present[1] = '아무생각이 없을 때에는, 아무런 생각도 하지 마라. <br>- 지렁이';
+        present[2] = '아프냐? 나도 아프다 <br>- 환자';
+        present[3] = '찾아라 비밀의 열쇠, 미로같이 얽힌 모험들 <br>-잼민이들'
+        present[4] = '아 덥다! <br>- 진짜로'
+        present[5] = '비가 내리다 말다.. 우산을 챙길까 말까 <br>- 폴씨'
+        present[6] = '괜찮아 괜찮아 100번 하면 정말 괜찮아 <br>- 개리'
+        present[7] = '유연한 남탓 생각하지 않기 <br>- 의현씨'
+        
+        function randomItem(a) {
+        return a[Math.floor(Math.random() * a.length)];
+        }
+        document.write("<p>&quot;" + randomItem(present) + "&quot;</p>",'')
+    </script>
+</body>
+</html>

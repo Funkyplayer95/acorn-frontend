@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid;
+            height: 20px;
+            width: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        let itembox =[2,4,6,8,10];
+        showArray(itembox);
+
+        let sum = 0;
+        for (let i=0; i<itembox.length; i++){
+            sum += itembox[i];
+        }
+        
+        itembox.push(sum);
+        showArray(itembox);
+        
+
+        function showArray(arr){
+            let str = "<table><tr>";
+            for (let i=0; i<arr.length; i++){
+                str += "<td>" + arr[i] + "</td>";
+            }
+            str += '</tr></table>'
+            document.write(str);
+        }
+
+
+        
+    </script>
+</body>
+</html>
