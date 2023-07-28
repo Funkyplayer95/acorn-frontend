@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            margin : 10px 3px;
+        }
+        table th, td{
+            border: 1px solid black;
+        }
+        table th{
+            background-color: lightgreen;
+            width: 100px;
+            height: 40px;
+        }
+        table td{
+            width: 200px;
+            height: 40px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="result">
+        <div class="quote"></div>
+        <div class="author"></div>
+    </div>
+
+    <script>
+        //콘솔에서 확인하기
+        fetch('https://dummyjson.com/quotes')
+        .then(response => response.json())
+        .then(data =>{
+        console.log(data);
+        const result = document.querySelector("#result");
+        const random = Math.floor(Math.random() * 30); //0~29 사이의 수
+        result.querySelector('.quote').innerHTML = data.quotes[random].quote;
+        result.querySelector('.author').innerHTML = ` -${data.quotes[random].author}`;
+        })
+        .catch(error => console.log(error));
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        fieldset{
+            width: 400px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .bigbox{
+            width: 400px;
+            height: 50px;
+            display: flex;
+        }
+        .leftbox{
+            width: 150px;
+            border: 1px solid;
+            text-align: center;
+            font-size: 30px;
+        }
+        .rightbox{
+            width: 250px;
+            text-align: center;
+            border: 1px solid;
+            font-size: 30px;
+        }
+        .font-box{
+            width: 400px;
+            display: flex;
+        }
+        .l-box{
+            width: 150px;
+            border: 1px solid;
+            text-align: center;
+        }
+        .r-box{
+            width: 250px;
+            text-align: center;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<fieldset>
+        <h1>방명록</h1>
+        <label for="name">이름</label>
+        <input type="text" id="name"><br>
+        <label for="place">방문한 곳</label>
+        <input type="text" id="place"><br>
+        <button type="button" class="Btn">기록하기</button>
+</fieldset>
+<div class="bigbox">
+ <div class="leftbox"> 이름</div>
+ <div class="rightbox"> 방문한 곳</div>
+</div>
+<div class="font-box">
+<div class="l-box"></div>
+<div class="r-box"></div>
+</div>
+
+<script>
+    
+    let Btn = document.querySelector('.Btn');
+    let Lbox = document.querySelector('.l-box')
+    let Rbox = document.querySelector('.r-box')
+    
+    Btn.addEventListener('click', () =>{
+        
+        let name = document.querySelector('#name').value;
+        let place = document.querySelector('#place').value;
+
+        
+        let newPl = document.createElement('p');
+        let newPr = document.createElement('p');
+        
+        let textl = document.createTextNode(name);
+        let textr = document.createTextNode(place);
+        newPl.appendChild(textl);
+        newPr.appendChild(textr);
+
+        Lbox.appendChild(newPl);
+        Rbox.appendChild(newPr);
+
+        document.querySelector('#name').value = ''
+        document.querySelector('#place').value = ''
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /*보이는 만큼의 단위*/
+        }
+        button{
+            background-color: lightseagreen;
+            font-weight: bold;
+            border: 3px double skyblue;
+            width: 200px;
+            height: 200px;
+            font-size: 25px;
+            border-radius: 15%;
+            color: purple;
+            box-shadow: 2px 2px 10px gray;
+        }
+        #note-box{
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+        .note{
+            margin: 15px;
+            padding: 10px;
+            background-color: lightcoral;
+            border-left: 3px solid red;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="note-box"></div>
+    <button id="btn">알림<br>메세지</button>
+
+    <script>
+        const btn = document.querySelector('#btn');
+        let noteBox = document.querySelector('#note-box');
+
+        btn.addEventListener('click',() => {
+            let note = document.createElement('div');
+            note.classList.add('note');
+            note.innerText = '팝업내용';
+            noteBox.appendChild(note);
+
+            setTimeout(() =>{note.remove();}, 3000); //remove메소드사용 - 펑션(기능)추가하여 3000mm/s (3초) 설정후 사라짐
+        });
+
+        //시간을 고려하는 타이머 함수 : 특정 시간 동안 함수 반복
+        // function greeting(){
+        //     console.log('안녕하세요');
+        // }
+        // setInterval(greeting,2000);
+        //clearInterval(greeting) // 멈추기
+
+
+    </script>
+</body>
+</html>
