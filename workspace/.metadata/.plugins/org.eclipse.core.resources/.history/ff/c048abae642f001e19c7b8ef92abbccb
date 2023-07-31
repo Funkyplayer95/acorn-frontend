@@ -1,0 +1,25 @@
+package com.acron.intro01;
+
+public class Review2Main {
+
+	public static void main(String[] args) {
+		
+		String day = "수";
+		switch (day) {
+		case "월":
+			break;
+		case "화":
+			break;
+		case "수":
+			break;
+		case "목":
+			break;
+		case "금":
+			break;
+
+		default:
+			break;
+		}
+	}
+
+}

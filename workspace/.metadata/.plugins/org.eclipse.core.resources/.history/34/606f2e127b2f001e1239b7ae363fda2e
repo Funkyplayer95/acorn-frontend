@@ -1,0 +1,20 @@
+package com.acron.java2;
+
+import java.util.Random;
+
+public class VariableMain01 {
+	public static void main(String[] args) {
+		//강제(명시적) 전환
+		//(데이터타입)
+		//int testData = 200;
+		//short testData2;
+		// testData2 = (short)testData;
+//		byte byteNumber = 0;
+//		short shortNumber = 257;
+//		byteNumber = (byte)shortNumber;
+//		System.out.println(byteNumber);
+		Random rand = new Random();
+		int x = rand.nextint(9000) + 1000;
+		
+	}
+}

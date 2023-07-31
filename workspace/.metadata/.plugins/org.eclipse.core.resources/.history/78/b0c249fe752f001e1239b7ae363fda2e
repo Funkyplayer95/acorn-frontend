@@ -1,0 +1,5 @@
+package com.acron.java2;
+
+public enum Weekday {
+	MON,THE,WED,THU,FRI,SAT,SUN;
+}

@@ -1,0 +1,11 @@
+package com.acron.intro01;
+
+public class Review1Main {
+
+	public static void main(String[] args) {
+		// 변수 선언과 초기화		
+		// 변수이름 = 값
+
+	}
+
+}

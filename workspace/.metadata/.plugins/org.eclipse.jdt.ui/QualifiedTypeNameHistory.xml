@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.acron.intro01.Weekday"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.SWITCH"/>
+    <fullyQualifiedTypeName name="org.graalvm.compiler.lir.amd64.AMD64ControlFlow.StrategySwitchOp.SwitchClosure"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

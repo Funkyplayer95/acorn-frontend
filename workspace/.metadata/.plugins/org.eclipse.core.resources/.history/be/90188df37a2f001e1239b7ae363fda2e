@@ -1,0 +1,5 @@
+package com.acron.java2;
+
+public interface random {
+
+}
