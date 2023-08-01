@@ -1,9 +1,0 @@
-package com.acron.java2;
-
-public class VariableMain01 {
-	public static void main(String[] args) {
-		
-
-	}
-
-}
